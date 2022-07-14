@@ -1,0 +1,43 @@
+<div class="form-container">
+    <div class="form">
+        <form [formGroup]="loginForm" (ngSubmit)="loginUser()">
+            <div class="form-head-text">
+                <h2>
+                    Sign in
+                    <br />
+                </h2>
+                <h3>Use your chatting Account</h3>
+            </div>
+            <div class="form-content">
+                <mat-form-field appearance="outline">
+                    <mat-label>Enter email</mat-label>
+                    <input matInput formControlName="email" [placeholder]="messageConstantRef.EMAIL"/>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Enter password</mat-label>
+                    <input matInput [type]="hide ? 'password' : 'text'" size="50" formControlName="password" />
+                </mat-form-field>
+                <div>
+                    <button mat-button color="primary" (click)="redirectToForgot()">
+                      Forgot Password?
+                    </button>
+                  </div>
+                <div class="checkbox">
+                    <mat-checkbox (click)="hide=!hide">Show password</mat-checkbox>
+                </div>
+            </div>
+            <div class="form-footer">
+                <div>
+                    <button mat-button color="primary" (click)="createAccount()">
+                        Create Account
+                    </button>
+                </div>
+                <div>
+                    <button mat-flat-button color="primary" (click)="redirectToDashboard()">
+                        Login
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
