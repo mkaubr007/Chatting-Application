@@ -16,7 +16,7 @@ import { RegisterComponent } from './register/register.component';
 
 import { LoginComponent } from './login/login.component';
 import { ForgetPasswordComponent } from './forget-password/forget-password.component';
-import { ResetPasswordComponent } from './reset-password/reset-password.component';
+
 
 
 
@@ -25,7 +25,7 @@ import { ResetPasswordComponent } from './reset-password/reset-password.componen
     RegisterComponent,
     LoginComponent,
     ForgetPasswordComponent,
-    ResetPasswordComponent,
+   
   
   ],
   imports: [

@@ -3,8 +3,6 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { Subject, Subscription } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import { LocalStorageConstants } from '../core/constants/local-storage.constant';
-import { RoleConstants } from '../core/constants/role.constant';
 import { RouteConstants } from '../core/constants/router.constant';
 import { HttpService } from '../core/services/http.service';
 import { IForgotOrResetPassword, IUserLogin, IUserRegister } from '../shared/models/auth/auth';
@@ -23,14 +21,7 @@ export class AuthService {
     private snackBar: MatSnackBar
   ) { }
 
-  public loggedIn(): boolean {
-    return !!this.getToken();
-  }
-
-  public getToken(): string | null {
-    return localStorage.getItem(LocalStorageConstants.TOKEN);
-  }
-
+  
   public registerUser(user: IUserRegister): Subscription {
    return this.Register(user).subscribe({
       next: (res: any) => {

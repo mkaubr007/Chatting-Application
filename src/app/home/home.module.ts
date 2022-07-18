@@ -26,8 +26,7 @@ import { RouterModule } from '@angular/router';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    NoopAnimationsModule,
-    RouterModule
+    NoopAnimationsModule
   ]
 })
 export class HomeModule { }

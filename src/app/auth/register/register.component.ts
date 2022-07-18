@@ -81,10 +81,10 @@ export class RegisterComponent implements OnInit {
   }
 
   public redirectedToLogin(): void{
-    this._router.navigate(['/login']);
+    this._router.navigate(['auth/login']);
   }
  
   public redirectToDashboard(): void{
-    this._router.navigate(['/dashboard']);
+    this._router.navigate(['home/dashboard']);
   }
 }

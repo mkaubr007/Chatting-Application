@@ -60,8 +60,7 @@ export interface IUser {
 
 export interface IForgotOrResetPassword {
   email?: string;
-  redirectURL?: string;
-  passwordToken?: string;
+  password?: string;
 }
 
 export interface IForgotOrResetPasswordData {

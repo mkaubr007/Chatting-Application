@@ -12,6 +12,7 @@ import { AuthService } from '../auth.service';
 export class ForgetPasswordComponent implements OnInit {
   forgetForm: any;
   isLoaderActive = false;
+  public hide = true;
 
   constructor(
     private _fb: FormBuilder,
@@ -32,27 +33,11 @@ export class ForgetPasswordComponent implements OnInit {
 
   public initLoginForm(): void {
     this.forgetForm = this._fb.group({
-      name: [
-        null,
-        [Validators.required, Utils.emptySpaceValidator()],
-      ],
       email: [
         null,
         [Validators.required, Utils.emptySpaceValidator(), Validators.email],
       ],
-      username: [
-        null,
-        [Validators.required, Utils.emptySpaceValidator()],
-      ],
       password: [null, [Validators.required, Utils.emptySpaceValidator()]],
-      birthplace: [
-        null,
-        [Validators.required, Utils.emptySpaceValidator()],
-      ],
-      favrotiplace: [
-        null,
-        [Validators.required, Utils.emptySpaceValidator()],
-      ],
     });
   }
 
@@ -67,12 +52,12 @@ export class ForgetPasswordComponent implements OnInit {
     this.isLoaderActive = false;
   }
 
-  public redirectedToReset(): void{
-    this._router.navigate(['/reset']);
+  public redirectedToLogin(): void{
+    this._router.navigate(['auth/login']);
   }
 
-  public redirectedToLogin(): void{
-    this._router.navigate(['/login']);
+  public redirectedToRegister(): void{
+    this._router.navigate(['auth/register']);
   }
 
 }

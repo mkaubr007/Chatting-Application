@@ -10,15 +10,16 @@ const routes: Routes = [
     loadChildren: () => import('./auth/auth.module').then(mod => mod.AuthModule),
   },
   {
-    path: '',
+    path: 'home',
     loadChildren: () => import('./home/home.module').then(mod => mod.HomeModule),
-    canActivate: [AuthGuard],
+    // canActivate: [AuthGuard],
   },
  
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
+  providers: [AuthGuard],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

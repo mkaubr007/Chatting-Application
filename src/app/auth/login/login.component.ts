@@ -59,14 +59,14 @@ export class LoginComponent implements OnInit {
   }
 
   public redirectToForgot(): void {
-    this._router.navigate(['/forgot']);
+    this._router.navigate(['auth/forgot']);
   }
 
   public redirectToDashboard(): void {
-    this._router.navigate(['/dashboard']);
+    this._router.navigate(['home/dashboard']);
   }
   
   public createAccount(): void {
-    this._router.navigate(['/register']);
+    this._router.navigate(['auth/register']);
   }
 }
